@@ -57,9 +57,7 @@ Pending to develop
 
 ### Video Demo
 
-![Wild Pig Detection Video](img/result_yolov8.mp4)
-
-*Embed your video here to demonstrate the system in action.*
+[![Wild Pig Detection Video](https://img.youtube.com/vi/ZUMFLSO9EvE/0.jpg)](https://youtu.be/ZUMFLSO9EvE)
 
 ### Image Results
 
