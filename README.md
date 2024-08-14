@@ -57,7 +57,7 @@ Pending to develop
 
 ### Video Demo
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZUMFLSO9EvE" frameborder="0" allowfullscreen></iframe>
+[Wild Pig Detection Video](https://youtu.be/ZUMFLSO9EvE)
 
 ### Image Results
 
