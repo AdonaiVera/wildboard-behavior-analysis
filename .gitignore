@@ -1,0 +1,17 @@
+# Models
+yolov8n.pt
+yolov8m.pt
+yolov8l-worldv2.pt
+
+# Folder
+output/
+models/
+input/
+datasets/
+__pycache__/
+runs/
+tain_model/
+
+# Files to ignore
+.DS_Store
+result_yolov8.mp4
