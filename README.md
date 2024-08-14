@@ -57,7 +57,7 @@ Pending to develop
 
 ### Video Demo
 
-[Wild Pig Detection Video](https://youtu.be/ZUMFLSO9EvE)
+[![Wild Pig Detection Video](https://img.youtube.com/vi/ZUMFLSO9EvE/0.jpg)](https://youtu.be/ZUMFLSO9EvE)
 
 ### Image Results
 
