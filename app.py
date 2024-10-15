@@ -1,7 +1,7 @@
 from typing import List, Tuple
 import cv2
 import supervision as sv
-from ultralytics import YOLO
+from ultralytics import YOLO, RTDETR
 import numpy as np
 from collections import defaultdict
 
@@ -15,10 +15,16 @@ def process_video(
     ignore_seconds_end: int = -1,  # Number of seconds to ignore at the end
     trajectory_length: int = 30  # Number of trajectory points to show
 ) -> None:
-    model = YOLO(source_weights_path)
- 
-    if source_weights_path == "yolov8l-worldv2.pt":
-        model.set_classes(["wild-pig"])
+    # Check what model to use 
+    if source_weights_path == "models/yolov8_v3.pt":
+        # Load the YOLOv8 model
+        model = YOLO(source_weights_path)
+    
+        if source_weights_path == "yolov8l-worldv2.pt":
+            model.set_classes(["wild-pig"])
+    else:
+        # Load a COCO-pretrained RT-DETR-l model
+        model = RTDETR(source_weights_path)
 
     cap = cv2.VideoCapture(stream_url)
     
@@ -54,7 +60,6 @@ def process_video(
                 else:
                     # Run YOLOv8 tracking on the frame, persisting tracks between frames
                     results = model.track(frame, conf=confidence_threshold, persist=True)
-                    
                     # Initialize variable to track the leader's ID
                     leader_id = None
                     max_distance = float('-inf')
@@ -121,7 +126,6 @@ def process_video(
                         label = "Group of Wild-pigs"
                         cv2.putText(frame, label, (x_min, y_min - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
-
                     # Visualize the results on the frame
                     annotated_frame = results[0].plot()
 
@@ -149,7 +153,7 @@ def process_image(
     model_path: str,
     input_image_path: str,
     output_image_path: str,
-    confidence_threshold: float = 0.3,
+    confidence_threshold: float = 0.4,
     iou_threshold: float = 0.7
 ) -> None:
     model = YOLO(model_path)

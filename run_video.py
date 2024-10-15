@@ -4,10 +4,10 @@ import numpy as np
 
 # Define client-specific variables
 camera_entry = [{
-    "url": "input/wild_pig_demo.mp4",
-    "confidence_threshold": 0.4,
-    "target_video_path": "output/result_yolov8.mp4",
-    "switch_model": "models/yolov8_v3.pt", # "yolov8l-worldv2.pt"
+    "url": "input/input_2.mp4",
+    "confidence_threshold": 0.324,
+    "target_video_path": "output/result_rtdeter_v2.mp4",
+    "switch_model": "models/rt-detr.pt", #"models/yolov8_v3.pt", # "yolov8l-worldv2.pt"
     "iou_threshold": 0.7,
 }]
 
