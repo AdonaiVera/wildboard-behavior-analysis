@@ -7,8 +7,8 @@ import cv2
 image_entries = [{
     "input_folder": "input/image",
     "output_folder": "output/output_image",
-    "confidence_threshold": 0.4,
-    "model_path": "models/yolo10_v2.pt",
+    "confidence_threshold": 0.3,
+    "model_path": "models/yolov8_thermal.pt",
     "iou_threshold": 0.7,
 }]
 
