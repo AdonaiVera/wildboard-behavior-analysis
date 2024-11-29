@@ -2,6 +2,10 @@
 yolov8n.pt
 yolov8m.pt
 yolov8l-worldv2.pt
+finetuned-model/
+
+# Dataset
+wild-pig-3/
 
 # Folder
 output/
@@ -15,3 +19,8 @@ tain_model/
 # Files to ignore
 .DS_Store
 result_yolov8.mp4
+
+# Folder environment
+.env
+env/
+venv/
